@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Stress Model</title>
+</head>
+<body>
+    <div class="home">
+        <h1>Please enter your Levels</h1>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action='{{ url_for("predict")}}' method="post">
+          <input type="text" name="snoring_range" placeholder="Snoring Range" required="required" /><br>
+            <input type="text" name="respiration_rate" placeholder="respiration rate" required="required" /><br>
+            <input type="text" name="temperature" placeholder="body temperature" required="required" /><br>
+            <input type="text" name="blood_oxygen" placeholder="blood oxygen" required="required" /><br>
+            <input type="text" name="sleep" placeholder="sleep" required="required" /><br>
+            <input type="text" name="heart_rate" placeholder="heart rate" required="required" /><br>
+    
+           
+    
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    
+       <br>
+       <br>
+      
+       
+     </div>
+</body>
+</html>
