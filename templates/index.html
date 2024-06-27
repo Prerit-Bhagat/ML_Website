@@ -3,31 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Correctly linking to CSS file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
+    <!-- Correctly linking to JavaScript file -->
+    <script src="/static/style.js" defer></script>
     <title>Stress Model</title>
 </head>
 <body>
+  <div class="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Stressmanager</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Calculate</a>
+          <!-- <a class="nav-item nav-link" href="#">Pricing</a> -->
+          <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="card-container">
+    
+  </div>
+  <div class="card-news">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
     <div class="home">
         <h1>Please enter your Levels</h1>
     
-         <!-- Main Input For Receiving Query to our ML -->
-        <form action='{{ url_for("predict")}}' method="post">
-          <input type="text" name="snoring_range" placeholder="Snoring Range" required="required" /><br>
-            <input type="text" name="respiration_rate" placeholder="respiration rate" required="required" /><br>
-            <input type="text" name="temperature" placeholder="body temperature" required="required" /><br>
-            <input type="text" name="blood_oxygen" placeholder="blood oxygen" required="required" /><br>
-            <input type="text" name="sleep" placeholder="sleep" required="required" /><br>
-            <input type="text" name="heart_rate" placeholder="heart rate" required="required" /><br>
+        <!-- Form for collecting input data -->
+        <form action='/predict' method="post">
+            <!-- Input fields for various parameters -->
+            <input type="text" name="snoring_range" placeholder="Snoring Range" required="required" /><br>
+            <input type="text" name="respiration_rate" placeholder="Respiration Rate" required="required" /><br>
+            <input type="text" name="temperature" placeholder="Body Temperature" required="required" /><br>
+            <input type="text" name="blood_oxygen" placeholder="Blood Oxygen" required="required" /><br>
+            <input type="text" name="sleep" placeholder="Sleep" required="required" /><br>
+            <input type="text" name="heart_rate" placeholder="Heart Rate" required="required" /><br>
     
-           
-    
+            <!-- Submit button to trigger prediction -->
             <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
         </form>
-    
-       <br>
-       <br>
-      
-       
-     </div>
+    </div>
 </body>
 </html>
