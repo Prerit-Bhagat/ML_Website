@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Correctly linking to CSS file -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles2.css') }}">
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
     <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
     <!-- Correctly linking to JavaScript file -->
@@ -21,7 +22,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Calculate</a>
+          <a class="nav-item nav-link" href="calculate.html">Calculate</a>
           <!-- <a class="nav-item nav-link" href="#">Pricing</a> -->
           <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
         </div>
@@ -31,32 +32,24 @@
   <div class="card-container">
     
   </div>
-  <div class="card-news">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
+  <main>
+    <div class="cards-container container flex" id="cards-container">
+        
     </div>
-  </div>
-    <div class="home">
-        <h1>Please enter your Levels</h1>
-    
-        <!-- Form for collecting input data -->
-        <form action='/predict' method="post">
-            <!-- Input fields for various parameters -->
-            <input type="text" name="snoring_range" placeholder="Snoring Range" required="required" /><br>
-            <input type="text" name="respiration_rate" placeholder="Respiration Rate" required="required" /><br>
-            <input type="text" name="temperature" placeholder="Body Temperature" required="required" /><br>
-            <input type="text" name="blood_oxygen" placeholder="Blood Oxygen" required="required" /><br>
-            <input type="text" name="sleep" placeholder="Sleep" required="required" /><br>
-            <input type="text" name="heart_rate" placeholder="Heart Rate" required="required" /><br>
-    
-            <!-- Submit button to trigger prediction -->
-            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-        </form>
+</main>
+
+<template id="template-news-card">
+    <div class="card">
+        <div class="card-header">
+            <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+        </div>
+        <div class="card-content">
+            <h3 id="news-title">This is the Title</h3>
+            <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+            <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+        </div>
     </div>
+</template>
+    
 </body>
 </html>

@@ -10,21 +10,19 @@ async function fetchnews(country) {
     console.log(data)
 }
 function bindData(articles) {
-    const cardcontainer=document.getElementsByClassName('card-container');
-    const cardnews=document.getElementsByClassName('card-news');
+    const cardsContainer = document.getElementById("cards-container");
+    const newsCardTemplate = document.getElementById("template-news-card");
 
-    cardcontainer.innerHTML="";
+    cardsContainer.innerHTML = "";
 
-    articles.forEach(element => {
-        if (!element.urlToImage) {
-            return;
-        }
-        const cardclone=cardnews.content.cloneNode(true);
-        fillData(cardclone,element)
-        cardcontainer.appendChild(cardclone);
+    articles.forEach((article) => {
+        if (!article.urlToImage) return;
+        const cardClone = newsCardTemplate.content.cloneNode(true);
+        fillDataInCard(cardClone, article);
+        cardsContainer.appendChild(cardClone);
     });
 }
-function fillData(cardClone,article) {
+function fillDataInCard(cardClone, article) {
     const newsImg = cardClone.querySelector("#news-img");
     const newsTitle = cardClone.querySelector("#news-title");
     const newsSource = cardClone.querySelector("#news-source");

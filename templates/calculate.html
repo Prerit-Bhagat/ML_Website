@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="home">
+        <h1>Please enter your Levels -</h1>
+    
+        <!-- Form for collecting input data -->
+        <form action='/predict' method="post" class="input-form">
+            <!-- Input fields for various parameters -->
+            <input type="text" name="snoring_range" placeholder="Snoring Range" required="required" /><br>
+            <input type="text" name="respiration_rate" placeholder="Respiration Rate" required="required" /><br>
+            <input type="text" name="temperature" placeholder="Body Temperature" required="required" /><br>
+            <input type="text" name="blood_oxygen" placeholder="Blood Oxygen" required="required" /><br>
+            <input type="text" name="sleep" placeholder="Sleep" required="required" /><br>
+            <input type="text" name="heart_rate" placeholder="Heart Rate" required="required" /><br>
+    
+            <!-- Submit button to trigger prediction -->
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
