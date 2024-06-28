@@ -21,7 +21,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="calculate.html">Calculate</a>
           <!-- <a class="nav-item nav-link" href="#">Pricing</a> -->
           <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
@@ -29,27 +29,31 @@
       </div>
     </nav>
   </div>
-  <div class="card-container">
+  <div class="card-container" style="border: solid rebeccapurple;">
     
   </div>
   <main>
-    <div class="cards-container container flex" id="cards-container">
+    <div class="cards-container" id="cards-container" style="border: solid red; display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; width: 100%; position: absolute;">
         
     </div>
 </main>
 
-<template id="template-news-card">
-    <div class="card">
+<template id="template-news-card"  >
+    <div class="card" style="border: solid blue; ">
         <div class="card-header">
-            <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img" style="width: 900px; height: 500px;">
         </div>
-        <div class="card-content">
-            <h3 id="news-title">This is the Title</h3>
-            <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
-            <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+        <div class="card-content" style="border: solid forestgreen;">
+            <h3 id="news-title">Title</h3>
+            <h6 class="news-source" id="news-source">date</h6>
+            <p class="news-desc" id="news-desc">Discription</p>
         </div>
     </div>
 </template>
+  <footer>
+      <p class="Heading">Want To Calculate Your Stress Level ?</p>
+      <a href="calculate.html" class="Link">Click Here</a>
+  </footer>
     
 </body>
 </html>
