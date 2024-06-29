@@ -18,13 +18,13 @@
 }
 .card
 {
-    border: solid red;
+    /* border: solid red; */
     width: 700px;
     height: 655px;
 }
 .cards-container
 {
-    border: solid blue;
+    /* border: solid blue; */
     padding: 2% 2%;
 }
 
@@ -42,7 +42,7 @@
 .card-header
 {
     
-    border: solid blue;
+    /* border: solid blue; */
     padding: 2% 2%;
     overflow: hidden;
     display: flex;

@@ -12,7 +12,7 @@
 }
 .input-form
 {
-   border: solid red;
+   /* border: solid red; */
    display: flex;
    flex-direction: column;
    gap: 5px;
