@@ -42,3 +42,42 @@ function fillDataInCard(cardClone, article) {
         window.open(article.url, "_blank");
     });
 }
+const searchInput = document.getElementById('Searchinput');
+const searchBtn = document.getElementById('Searchbtn');
+
+// Function to handle search action
+function performSearch() {
+    const searchTerm = searchInput.value.trim(); // Get the trimmed value of search input
+    console.log(searchTerm)
+    if (searchTerm !== '') {
+        // Process the search term (for example, display it somewhere)
+        console.log('Search term:', searchTerm);
+        fetchnews(searchTerm)
+        // Clear the input field
+        searchInput.value = '';
+    } else {
+        alert('Please enter a search term.');
+    }
+}
+// console.log(searchBtn)
+// console.log(searchInput)
+
+// Event listener for Enter key press in the input field
+searchInput.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        // Prevent form submission
+        performSearch();
+        event.preventDefault(); 
+        event.preventDefault(); 
+    }
+});
+
+// Event listener for click on the search button
+searchBtn.addEventListener('click', function(event) {
+    performSearch();
+    event.preventDefault(); 
+});
+
+text=document.getElementsByClassName('card-content');
+// console.log(text)
+text.addEventListener("on")
