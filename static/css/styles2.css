@@ -19,21 +19,21 @@
 .card
 {
     /* border: solid red; */
-    width: 700px;
-    height: 655px;
+    width:632px;
+    height: 555px;
 }
 .cards-container
 {
     /* border: solid blue; */
-    padding: 2% 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: auto;
+    /* margin-left: 10px; */
 }
 
 .card-content:hover{
     transition: transform .2s; /* Animation */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center ;
+    
   }
 .card-content:hover
 {
@@ -51,7 +51,11 @@
 }
 .card-header img
 {
-    width: 650px;
-    height: 390px;
+    width: 610px;
+    height: 370px;
     border-radius: 2%;
+}
+.card-header img:hover
+{
+    transform: scale(1.01);
 }
