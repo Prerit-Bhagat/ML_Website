@@ -19,15 +19,21 @@
 .card
 {
     /* border: solid red; */
-    width:632px;
+    width:400px;
     height: 555px;
+    margin-left: 2.3rem;
 }
 .cards-container
 {
     /* border: solid blue; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
+    gap: 5px;
+    padding: 2% 2%;
+    margin: auto auto;
+    /* align-items: center; */
+    width: 100%;
     /* margin-left: 10px; */
 }
 
@@ -51,7 +57,7 @@
 }
 .card-header img
 {
-    width: 610px;
+    width: 550px;
     height: 370px;
     border-radius: 2%;
 }
